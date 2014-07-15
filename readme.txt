@@ -9,13 +9,9 @@
 #
 #    选中导入的项目 ——> 右键 ——> Maven ——> Update Project Configuration
 #    
-#    没有 maven？查看安装：
+#    查看 maven 帮助
 #
-#    http://www.blogjava.net/fancydeepin/archive/2014/03/06/maven-setup.html
-#
-#    eclipse 没有 maven 插件？查看安装：
-#
-#    http://www.blogjava.net/fancydeepin/archive/2014/03/06/eclipse-maven-setup.html
+#    https://github.com/lychie/jelly/wiki/Maven
 #
 #    生成 eclipse 项目 ： mvn eclipse:eclipse
 #
