@@ -1,7 +1,4 @@
-﻿# ignore class files
-*.class
-
-# ignore target directory
+﻿# ignore target directory
 target/
 
 # ignore bin directory
