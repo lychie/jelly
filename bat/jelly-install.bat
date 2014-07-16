@@ -22,8 +22,18 @@
 	if not exist javadoc md javadoc
 
 	xcopy target\jelly*.GA-javadoc.zip javadoc /Y
+	
+	md bin\classes
+
+	xcopy target\classes bin\classes /E /Y
 
 	rd /q /s target
+	
+	md target\classes
+	
+	xcopy bin\classes target\classes /E /Y
+
+	rd /q /s bin\classes
 
 	echo [INFO] ------------------------------------------------------------------------
 	echo [INFO] Finish
