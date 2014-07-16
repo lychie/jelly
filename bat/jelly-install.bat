@@ -14,10 +14,14 @@
 	call mvn clean package -Dmaven.test.skip=true
 	
 	ren target\jelly*.GA-javadoc.jar *.zip
-
-	xcopy target\jelly*.GA-javadoc.zip javadoc /Y
+	
+	if not exist bin md bin
 
 	xcopy target\jelly*.GA.jar bin /Y
+	
+	if not exist javadoc md javadoc
+
+	xcopy target\jelly*.GA-javadoc.zip javadoc /Y
 
 	rd /q /s target
 
