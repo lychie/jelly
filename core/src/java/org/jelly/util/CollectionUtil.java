@@ -143,37 +143,48 @@ public class CollectionUtil {
 	}
 	
 	/**
-	 * <des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型。
-	 * 特别说明, 中文排序不十分准确, 常用汉字排序可用, 若要求中文严格排序, 建议不要使用 </des>
+	 * <des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型。</des>
 	 * @param collection 需要进行排序的集合
 	 * @param key 关键字
 	 * @since 1.0.0
 	 */
 	public static <E> void sortByAsc(Collection<E> collection, String key){
-		sortBySortKey(collection, key, SortCode.ASC);
+		sort(collection, key, SortCode.ASC);
 	}
 	
 	/**
-	 * <des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型。
-	 * 特别说明, 中文排序不十分准确, 常用汉字排序可用, 若要求中文严格排序, 建议不要使用 </des>
+	 * <des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型。</des>
 	 * @param collection 需要进行排序的集合
 	 * @param key 关键字
 	 * @since 1.0.0
 	 */
 	public static <E> void sortByDesc(Collection<E> collection, String key){
-		sortBySortKey(collection, key, SortCode.DESC);
+		sort(collection, key, SortCode.DESC);
 	}
 	
 	// 根据排序关键字排序集合
-	@SuppressWarnings("unchecked")
-	private static <E> void sortBySortKey(Collection<E> collection, String key, SortCode sortCode){
+	private static <E> void sort(Collection<E> collection, String key, SortCode sortCode){
 		if(isEmpty(collection)) return ;
-		Object[] source = ArrayUtil.asArray(collection);
+		E[] source = toArray(collection);
+		E e = collection.iterator().next();
+		SimpleComparator comparator = new SimpleComparator(e.getClass(), key, sortCode);
+		Arrays.sort(source, comparator);
+		collection.clear();
+		collection.addAll(asList(source));
+	}
+	
+	// 根据排序关键字排序集合
+	// 废弃原因：采用Java自带的内置排序算法
+	// 由 sort(Collection<E>, String, SortCode) 替代
+	@Deprecated
+	static <E> void sortBySortKey(Collection<E> collection, String key, SortCode sortCode){
+		if(isEmpty(collection)) return ;
+		E[] source = toArray(collection);
 		E e = collection.iterator().next();
 		SimpleComparator comparator = new SimpleComparator(e.getClass(), key, sortCode);
 		quicksort(source, 0, source.length - 1, comparator);
 		collection.clear();
-		collection.addAll((List<E>)asList(source));
+		collection.addAll(asList(source));
 	}
 	
 	// 快速排序算法

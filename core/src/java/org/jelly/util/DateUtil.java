@@ -87,6 +87,16 @@ public final class DateUtil {
 	}
 	
 	/**
+	 * <des> 尝试解析日期字符串的模式, 并解析日期字符串为日期类型 </des>
+	 * @param date 日期字符串
+	 * @return 日期对象
+	 * @since 1.0.0
+	 */
+	public static Date parseDate(String date){
+		return parseDate(date, getPattern(date));
+	}
+	
+	/**
 	 * <des> 解析字符串为日期类型 </des>
 	 * @param date 日期字符串
 	 * @param pattern 模式串

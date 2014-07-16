@@ -11,8 +11,7 @@ import org.jelly.util.ConvertUtil;
 import org.jelly.util.FieldUtil;
 import org.jelly.util.StringUtil;
 /**
- * 简单的对象比较器。支持的可排序的类型有：数值类型、字符类型、字符串类型、布尔类型、日期类型<br>
- * 特别说明, 字符型对中文的支持不十分准确, 支持常用汉字, 若要求中文严格比较, 建议不要使用
+ * 简单的对象比较器。支持的可排序的类型有：数值类型、字符类型、字符串类型、布尔类型、日期类型
  * @author Lychie Fan
  * @since 1.0.0
  */
@@ -22,10 +21,17 @@ public class SimpleComparator implements Comparator<Object> {
 	private Class<?> keyType;
 	private SortCode sortCode;
 	
+	/**
+	 * 默认升序排序
+	 * @since 1.0.0
+	 */
 	public SimpleComparator(Class<?> entityClass, String key){
 		this(entityClass, key, SortCode.ASC);
 	}
 	
+	/**
+	 * @see org.jelly.code.SortCode
+	 */
 	public SimpleComparator(Class<?> entityClass, String key, SortCode sortCode){
 		this.key = key;
 		this.sortCode = sortCode;
@@ -66,6 +72,12 @@ public class SimpleComparator implements Comparator<Object> {
 		return n1.compareTo(n2);
 	}
 
+	/**
+	 * 经多轮测试发现, '冼'(与显示的显同音)排序不正确(排到了Z开头的中文的后面), 尝试了其它几种比较算法, 
+	 * 这个问题仍然还得不到解决。当然也有尝试使用Java自带的Locale.CHINA Comparator试过, 得到的结果是
+	 * 一样的。可能还存在其它中文排序不准确的案例, 这个问题有待解决。(暂不考虑用字典)
+	 * @since 1.0.0
+	 */
 	// 比较两个字符类串型关键字的大小
 	private int stringCompare(Object o1, Object o2) {
 		String s1 = StringUtil.getStringISO1(StringUtil.getBytesGBK(o1.toString()));
@@ -75,9 +87,7 @@ public class SimpleComparator implements Comparator<Object> {
 
 	// 比较两个字符类型关键字的大小
 	private int charCompare(Object o1, Object o2) {
-		char c1 = (Character) o1;
-		char c2 = (Character) o2;
-		return c1 - c2;
+		return stringCompare(o1, o2);
 	}
 
 	// 比较两个布尔类型关键字的大小
