@@ -64,7 +64,6 @@
         <version>2.17</version>
         <configuration>
           <skipTests>true</skipTests>
-          <classesDirectory>target/classes</classesDirectory>
         </configuration>
       </plugin>
       <plugin>
