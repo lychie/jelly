@@ -53,9 +53,6 @@
           <source>1.6</source>
           <target>1.6</target>
           <encoding>UTF8</encoding>
-          <compilerArguments>
-            <extdirs>${web-inf}/lib</extdirs>
-          </compilerArguments>
         </configuration>
       </plugin>
       <plugin>
