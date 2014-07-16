@@ -4,9 +4,6 @@
 # ignore target directory
 target/
 
-# ignore classes directory
-classes/
-
 # ignore bin directory
 bin/
 
