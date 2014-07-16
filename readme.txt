@@ -12,6 +12,10 @@
 #    查看 maven 帮助
 #
 #    https://github.com/lychie/jelly/wiki/Maven
+#    
+#    wiki
+#
+#    https://github.com/lychie/jelly/wiki
 #
 #    生成 eclipse 项目 ： mvn eclipse:eclipse
 #
