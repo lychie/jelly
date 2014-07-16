@@ -16,6 +16,10 @@
 #    wiki
 #
 #    https://github.com/lychie/jelly/wiki
+#    
+#    blog
+#
+#    http://lychie.github.io
 #
 #    生成 eclipse 项目 ： mvn eclipse:eclipse
 #
