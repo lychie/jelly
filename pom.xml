@@ -53,7 +53,7 @@
           <source>1.6</source>
           <target>1.6</target>
           <encoding>UTF8</encoding>
-          <compilerArguments> 
+          <compilerArguments>
             <extdirs>${web-inf}/lib</extdirs>
           </compilerArguments>
         </configuration>
@@ -64,6 +64,7 @@
         <version>2.17</version>
         <configuration>
           <skipTests>true</skipTests>
+          <classesDirectory>target/classes</classesDirectory>
         </configuration>
       </plugin>
       <plugin>
