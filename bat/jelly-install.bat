@@ -15,7 +15,7 @@
 	
 	ren target\jelly*.GA-javadoc.jar *.zip
 
-	xcopy target\jelly*.GA-javadoc.zip javadocs /Y
+	xcopy target\jelly*.GA-javadoc.zip javadoc /Y
 
 	xcopy target\jelly*.GA.jar bin /Y
 
