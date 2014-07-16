@@ -4,11 +4,9 @@ import java.math.BigDecimal;
 import java.util.Random;
 import org.jelly.exception.ExecutetimeException;
 /**
- * <p> <b> @描述：</b> 随机种子常用操作工具类
- * <p> <b> @作者：</b> fancore
- * <p> <b> @邮箱：</b> fancore@126.com
- * <p> <b> @日期：</b> 2014-06-28
- * <p> <b> @since 0.1.0 </b>
+ * 随机种子常用操作工具类
+ * @author Lychie Fan
+ * @since 1.0.0
  */
 public class RandomSeedUtil {
 
