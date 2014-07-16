@@ -36,7 +36,6 @@
         <directory>${basedir}</directory>
         <includes>
           <include>readme.txt</include>
-          <include>versions.txt</include>
         </includes>
       </resource>
     </resources>
@@ -64,7 +63,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.17</version>
         <configuration>
-          <skip>true</skip>
+          <skipTests>true</skipTests>
         </configuration>
       </plugin>
       <plugin>
@@ -79,7 +78,7 @@
           <header>${project.name} ${project.version} API</header>
           <footer>${project.name} ${project.version} API</footer>
           <bottom><![CDATA[Copyright &copy; 2013-2014 fancore. All rights reserved.]]></bottom>
-          <stylesheetfile>${basedir}/javadocs/css/stylesheet.css</stylesheetfile>
+          <stylesheetfile>${basedir}/stylesheet.css</stylesheetfile>
         </configuration>
         <executions>
           <execution>
