@@ -11,7 +11,7 @@
 	cd %~dp0
 	cd ..
 	
-	call mvn clean package -Dmaven.test.skip=true
+	call mvn package -Dmaven.test.skip=true
 	
 	ren target\jelly*.GA-javadoc.jar *.zip
 	
