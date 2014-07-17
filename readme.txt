@@ -1,25 +1,27 @@
 ﻿
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #	
-#    dev environment ：eclipse ( indigo ) + maven
+#    `dev environment`
 #	
-#    eclipse ide import ：
+#    eclipse ( indigo ) + maven
+#	
+#    `eclipse ide import`
 #	
 #    Import ——> Maven ——> Existing Maven Projects
 #    
-#    see maven help
+#    `see maven help`
 #
 #    https://github.com/lychie/jelly/wiki/Maven
 #    
-#    wiki
+#    `wiki`
 #
 #    https://github.com/lychie/jelly/wiki
 #    
-#    blog
+#    `blog`
 #
 #    http://lychie.github.io
 #	
-#    module framework
+#    `module framework`
 #	
 #    jelly
 #      |
