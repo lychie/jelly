@@ -1,15 +1,13 @@
 ﻿
 ##########################################################################################
 #	
-#    开发环境：eclipse（indigo） + maven
+#    dev environment ：eclipse ( indigo ) + maven
 #	
-#    eclipse ide 导入项目：
+#    eclipse ide import ：
 #	
 #    Import ——> Maven ——> Existing Maven Projects
-#
-#    选中导入的项目 ——> 右键 ——> Maven ——> Update Project Configuration
 #    
-#    查看 maven 帮助
+#    see maven help
 #
 #    https://github.com/lychie/jelly/wiki/Maven
 #    
@@ -20,27 +18,28 @@
 #    blog
 #
 #    http://lychie.github.io
-#
-#    生成 eclipse 项目 ： mvn eclipse:eclipse
-#
-#    生成 idea 项目 ： mvn idea:idea
 #	
-#    项目结构 ：
+#    module framework
 #	
 #    jelly
 #      |
-#      |-core
-#      |  |
-#      |  |-src
-#      |     |
-#      |     |-java ( 源代码 )
+#      |--pom.xml(pom)
 #      |
-#      |-examples
-#           |
-#           |-src
-#              |
-#              |-java ( 演示代码 )
-#              |
-#              |-resources ( 资源文件 )
-#	
+#      |--core
+#      |   |
+#      |  pom.xml(jar)
+#      |
+#      |--examples
+#      |    |
+#      |    |--pom.xml(pom)
+#      |    |
+#      |    |--case
+#      |    |   |
+#      |    |  pom.xml(jar)
+#      |    |
+#      |    |--webapp
+#      |    |   |
+#      |    |  pom.xml(war)
+#      |    |
+#
 ##########################################################################################
