@@ -9,7 +9,6 @@
   </parent>
   <artifactId>jelly-core</artifactId>
   <name>jelly-core</name>
-  <!--  
   <build>
     <plugins>
       <plugin>
@@ -24,7 +23,7 @@
           <header>${project.name} ${project.version} API</header>
           <footer>${project.name} ${project.version} API</footer>
           <bottom><![CDATA[Copyright &copy; 2013-2014 Lychie Fan. All rights reserved.]]></bottom>
-          <stylesheetfile>../stylesheet.css</stylesheetfile>
+          <stylesheetfile>${basedir}/../stylesheet.css</stylesheetfile>
         </configuration>
         <executions>
           <execution>
@@ -37,5 +36,4 @@
       </plugin>
     </plugins>
   </build>
-  -->
 </project>
