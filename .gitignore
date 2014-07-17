@@ -1,0 +1,13 @@
+﻿# ignore class files
+*.class
+
+# ignore classes directory
+classes/
+
+# ignore target directory
+target/
+
+# ignore eclipse config files
+.project
+.classpath
+.settings/
