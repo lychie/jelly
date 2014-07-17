@@ -20,9 +20,6 @@
           <source>1.6</source>
           <target>1.6</target>
           <encoding>UTF8</encoding>
-          <excludes>
-            <exclude>**/*Demo.*</exclude>
-          </excludes>
         </configuration>
       </plugin>
     </plugins>
