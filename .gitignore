@@ -7,6 +7,12 @@ classes/
 # ignore target directory
 target/
 
+# ignore bin directory
+bin/
+
+# ignore javadoc directory
+javadoc/
+
 # ignore eclipse config files
 .project
 .classpath
