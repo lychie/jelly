@@ -1,0 +1,133 @@
+/**
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+ * * * @描述：javadoc css stylesheet
+ * * * @作者：fancore
+ * * * @邮箱：fancore@126.com
+ * * * @日期：2014-05-22
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+ */
+.TableHeadingColor {
+	background: #CCCCFF;
+	color: #3B3B3B;
+}
+
+.TableSubHeadingColor {
+	color: #000000;
+}
+
+.TableRowColor {
+	background: #F5F5F5;
+	color: #000000;
+}
+
+.FrameTitleFont {
+	font-size: 100%;
+	font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+	color: #000000;
+}
+
+.FrameHeadingFont {
+	font-size: 90%;
+	font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+	color: #000000;
+}
+
+.FrameItemFont {
+	font-size: 90%;
+	font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+	color: #000000;
+}
+
+.NavBarCell1 {
+	background-color: #F5F5F5;
+	color: #000000;
+}
+
+.NavBarCell1Rev {
+	background-color: #1E90FF;
+	color: #FFFFFF;
+}
+
+.NavBarFont1 {
+	font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+	color: #000000;
+	color: #4682B4;
+}
+
+.NavBarFont1Rev {
+	font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	color: #FFFFFF;
+}
+
+.NavBarCell2 {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F5F5F5;
+	color: #008080;
+}
+
+.NavBarCell3 {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F5F5F5;
+	color: #000000;
+}
+
+.NavBarCell2 a b {
+	font-size: 14px;
+}
+
+.TableHeadingColor th {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+body,pre,dt,code {
+	background-color: #F5F5F5;
+	color: #000000;
+	font-family: '仿宋体', 'Courier', Helvetica, Arial, sans-serif;
+}
+
+body {
+	line-height: 24px;
+}
+
+h1 {
+	font-size: 145%;
+}
+
+table {
+	border-color: #F0F8FF;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FF00FF;
+}
+
+th {
+	/* background-color: #FFE4C4; */
+}
+
+td,th {
+	border-color: #ffffff;
+}
+
+notes {
+	color: gray;
+	letter-spacing: 2px;
+}
+
+output {
+	color: #707070;
+}
+
+dl dd des {
+	font-weight: bold;
+	color: #3B3B3B;
+	letter-spacing: 2px;
+}
