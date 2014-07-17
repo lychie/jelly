@@ -14,15 +14,15 @@
 	
 	call mvn install -Dmaven.test.skip=true
 	
-	rd /q /s bin
+	if exist bin rd /q /s bin
 	
-	md bin
+	if not exist bin md bin
 	
 	xcopy core\target\jelly*.GA.jar bin /Y
 	
-	rd /q /s javadoc
+	if exist javadoc rd /q /s javadoc
 	
-	md javadoc
+	if not exist javadoc md javadoc
 	
 	xcopy core\target\jelly*.GA-javadoc.jar javadoc /Y
 	
