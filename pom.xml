@@ -14,18 +14,20 @@
     <module>examples</module>
   </modules>
   <dependencies>
-    <!-- json dependencies begin -->
+    <!-- gson dependencies begin -->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.2.4</version>
     </dependency>
+    <!-- gson dependencies end -->
+    <!-- servlet dependencies begin -->
     <dependency>     
       <groupId>javax.servlet</groupId>     
       <artifactId>servlet-api</artifactId>     
       <version>2.5</version> 
     </dependency>
-    <!-- json dependencies end -->
+    <!-- servlet dependencies end -->
   </dependencies>
   <build>
     <plugins>
