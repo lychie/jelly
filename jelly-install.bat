@@ -12,6 +12,10 @@
 
 	cd %~dp0
 	
+	if exist core\target rd /q /s core\target
+	
+	if exist examples\webapp\target rd /q /s examples\webapp\target
+	
 	call mvn install -Dmaven.test.skip=true
 	
 	if exist bin rd /q /s bin
