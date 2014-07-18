@@ -1,0 +1,19 @@
+#main .enabled-text {
+	font-size: 16px;
+	color: #D87093;
+}
+
+#main .enabled-text:hover {
+	cursor: pointer;
+	color: gray;
+}
+
+#main textarea {
+	padding: 10px 15px;
+}
+
+#main .disabled-text {
+	color: gray;
+	font-size: 16px;
+	text-decoration: line-through;
+}
