@@ -12,8 +12,8 @@
   <body>
     <div id="main" align="center">
       <p>
-        <a href="${basepath}/demo/json/person/find" target="_blank" title="点击查看结果">
-          ${basepath}/demo/json/person/find
+        <a href="${basepath}/demo/json" target="_blank" title="点击查看结果">
+          ${basepath}/demo/json
         </a>
       </p>
       <p>

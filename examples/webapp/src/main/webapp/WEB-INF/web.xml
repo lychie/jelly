@@ -8,7 +8,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>PersonServlet</servlet-name>
-    <url-pattern>/demo/json/person/find</url-pattern>
+    <url-pattern>/demo/json</url-pattern>
   </servlet-mapping>
   <!-- json demo config end -->
   

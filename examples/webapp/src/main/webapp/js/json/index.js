@@ -15,7 +15,7 @@ function isUnload(){
 
 function load(){
 	$.ajax({
-		url : "demo/json/person/find",
+		url : "demo/json",
 		type : "POST",
 		error : function(){
 			alert("请求失败!");
