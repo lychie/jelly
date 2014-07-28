@@ -11,12 +11,11 @@
     <script type="text/javascript">
     $(function(){
     	$("#pagination").pagination(${pager.totalCount}, {
-        	items_per_page : ${pager.pageSize},	/* 每页显示的记录条数 */
-        	current_page : ${pager.thisPage - 1},	/* 当前页码 */
-        	num_edge_entries : 0,		/* 两侧的分页条目 */
-        	num_display_entries : 10,	/* 连续分页主体部分分页条目数 */
-        	prev_text : '上一页',	/* 上一页 */
-        	next_text : '下一页',	/* 下一页 */
+        	items_per_page : ${pager.pageSize},
+        	current_page : ${pager.thisPage - 1},
+        	num_display_entries : 10,
+        	prev_text : '上一页',
+        	next_text : '下一页',
         	ellipse_text : "",
         	link_to : '__id__.html',
     		callback : function(){return true;}
