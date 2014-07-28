@@ -79,6 +79,34 @@ public class HibernateDaoDemo {
 	}
 
 	/**
+	 * 查找
+	 */
+	@Test
+	public void findByHql(){
+		List<Person> persons = personDao.findByHql();
+		Testing.printlnObject(persons);
+	}
+
+	/**
+	 * 查找
+	 */
+	@Test
+	public void findByCriteria(){
+		List<Person> persons = personDao.findByCriteria();
+		Testing.printlnObject(persons);
+	}
+	
+
+	/**
+	 * hibernate & mysql 中文排序
+	 */
+	@Test
+	public void findByOrder(){
+		List<Person> persons = personDao.findByOrder();
+		Testing.printlnObject(persons);
+	}
+
+	/**
 	 * 保存
 	 */
 	@Test
