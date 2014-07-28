@@ -1,0 +1,38 @@
+DROP DATABASE IF EXISTS JELLY_ORM_DEMO_DB;
+
+CREATE DATABASE JELLY_ORM_DEMO_DB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE JELLY_ORM_DEMO_DB;
+
+DROP TABLE IF EXISTS PERSON;
+
+CREATE TABLE PERSON (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(18) NOT NULL,
+  age int(10) NOT NULL,
+  sex char(1) NOT NULL,
+  address varchar(120) DEFAULT NULL,
+  birthday date DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+INSERT INTO PERSON VALUES ('1', '何国群', '20', '男', '广东广州', '1990-04-15');
+INSERT INTO PERSON VALUES ('2', '叶水燕', '23', '女', '广东茂名', '1989-09-13');
+INSERT INTO PERSON VALUES ('3', '钟婷婷', '22', '女', '广东深圳', '1991-12-08');
+INSERT INTO PERSON VALUES ('4', '杨忠杰', '22', '男', '广东湛江', '1990-09-21');
+INSERT INTO PERSON VALUES ('5', '叶国珠', '23', '女', '广东佛山', '1990-11-10');
+INSERT INTO PERSON VALUES ('6', '杨晓婷', '21', '女', '广东云浮', '1990-05-01');
+INSERT INTO PERSON VALUES ('7', '方创初', '22', '男', '广东汕头', '1991-11-12');
+INSERT INTO PERSON VALUES ('8', '蔡水娇', '22', '女', '广东佛山', '1990-07-09');
+INSERT INTO PERSON VALUES ('9', '梁丽桥', '21', '女', '广东茂名', '1991-01-18');
+INSERT INTO PERSON VALUES ('10', '范忠荣', '23', '男', '广东广州', '1992-10-06');
+INSERT INTO PERSON VALUES ('11', '梁金燕', '23', '女', '广东珠海', '1990-11-23');
+INSERT INTO PERSON VALUES ('12', '张仕华', '23', '男', '广东茂名', '1990-12-25');
+INSERT INTO PERSON VALUES ('13', '梁文霞', '23', '女', '广东霞洞', '1990-04-02');
+INSERT INTO PERSON VALUES ('14', '莫小文', '21', '女', '广东电白', '1989-08-16');
+INSERT INTO PERSON VALUES ('15', '蔡叶青', '23', '男', '广东水东', '1989-11-17');
+INSERT INTO PERSON VALUES ('16', '钟丽芳', '22', '女', '广东茂名', '1990-03-03');
+INSERT INTO PERSON VALUES ('17', '蔡圣昌', '22', '男', '广东电城', '1990-03-19');
+INSERT INTO PERSON VALUES ('18', '李燕红', '23', '女', '广东水东', '1990-07-04');
+INSERT INTO PERSON VALUES ('19', '李颖唐', '21', '女', '广东茂名', '1990-12-13');
+INSERT INTO PERSON VALUES ('20', '邵志盛', '22', '男', '广东水东', '1989-08-04');

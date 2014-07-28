@@ -22,7 +22,4 @@
     </property>
   </bean>
   
-  <mvc:resources mapping="/index.jsp" location="/index.jsp"/>
-  <mvc:resources mapping="/css/*.css" location="/css/*.css"/>
-  
 </beans>

@@ -3,7 +3,9 @@ package org.jelly.examples.orm.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.jelly.exception.ExecutetimeException;
-
+/**
+ * @author Lychie Fan
+ */
 public class HibernateUtil {
 
 	private static final SessionFactory sessionFactory = buildSessionFactory();
