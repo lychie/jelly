@@ -10,6 +10,7 @@
     <div id="main">
       <ul>
         <li><a href="json-demo.jsp" target="_blank">json demo</a></li>
+        <li><a href="person/list/1.html" target="_blank">orm demo</a></li>
       </ul>
     </div>
   </body>
