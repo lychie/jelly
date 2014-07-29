@@ -4,7 +4,7 @@
   <groupId>org.lychie</groupId>
   <artifactId>jelly-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.2.0.GA</version>
+  <version>1.3.0.GA</version>
   <name>jelly-parent</name>
   <properties>
     <project.encoding>UTF-8</project.encoding>
