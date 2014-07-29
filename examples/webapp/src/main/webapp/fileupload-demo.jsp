@@ -2,17 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>jelly demo welcome</title>
+    <title>jelly fileupload demo welcome</title>
     <c:set var="basepath" value="${pageContext.request.contextPath}" />
     <link rel="stylesheet" type="text/css" href="${basepath}/css/style.css" />
   </head>
   <body>
     <div id="main">
       <ul>
-        <li><a href="json-demo.jsp" target="_blank">json demo</a></li>
-        <li><a href="person/list/1.html" target="_blank">orm demo</a></li>
-        <li><a href="fileupload-demo.jsp" target="_blank">fileupload demo</a></li>
-        <li><a href="filedownload-demo.jsp" target="_blank">filedownload demo</a></li>
+        <li><a href="simple-fileupload.jsp" target="_blank">simple-fileupload demo</a></li>
+        <li><a href="multi-fileupload.jsp" target="_blank">multi-fileupload demo</a></li>
+        <li><a href="md5-fileupload.jsp" target="_blank">md5-fileupload demo</a></li>
       </ul>
     </div>
   </body>

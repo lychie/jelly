@@ -4,7 +4,7 @@
   <groupId>org.lychie</groupId>
   <artifactId>jelly-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.3.0.GA</version>
+  <version>1.4.0.GA</version>
   <name>jelly-parent</name>
   <properties>
     <project.encoding>UTF-8</project.encoding>
@@ -110,6 +110,13 @@
       <version>1.6.8</version>
     </dependency>
     <!-- aspectj dependencies end -->
+    <!-- fileupload dependencies begin -->
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3</version>
+    </dependency>
+    <!-- fileupload dependencies end -->
   </dependencies>
   <build>
     <plugins>

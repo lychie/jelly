@@ -52,6 +52,49 @@
   </servlet-mapping>
   <!-- json demo config end -->
   
+  <!-- fileupload demo config begin -->
+  <servlet>
+    <servlet-name>SimpleFileUpload</servlet-name>
+    <servlet-class>org.jelly.fileupload.SimpleFileUpload</servlet-class>
+    <init-param>
+      <param-name>configFilePath</param-name>
+      <param-value>classpath:fileupload.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleFileUpload</servlet-name>
+    <url-pattern>/simplefileupload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MD5FileUpload</servlet-name>
+    <servlet-class>org.jelly.fileupload.MD5FileUpload</servlet-class>
+    <init-param>
+      <param-name>configFilePath</param-name>
+      <param-value>classpath:fileupload.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MD5FileUpload</servlet-name>
+    <url-pattern>/md5fileupload</url-pattern>
+  </servlet-mapping>
+  <!-- fileupload demo config end -->
+  
+  <!-- filedownload demo config end -->
+  <servlet>
+    <servlet-name>SimpleFileDownload</servlet-name>
+    <servlet-class>org.jelly.filedownload.SimpleFileDownload</servlet-class>
+    <init-param>
+      <param-name>fileRootPath</param-name>
+      <param-value>resources</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleFileDownload</servlet-name>
+    <url-pattern>/filedownload</url-pattern>
+  </servlet-mapping>
+  <!-- filedownload demo config end -->
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
