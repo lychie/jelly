@@ -1,6 +1,7 @@
 package org.jelly.util;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -107,6 +108,23 @@ public class FieldUtil {
 	}
 	
 	/**
+	 * <des> 获取类声明的非静态字段的列表集合(不包含父类) </des>
+	 * @since 1.5.0
+	 */
+	public static List<Field> getDeclaredNonStaticFields(Class<?> clazz){
+		Field[] fields = clazz.getDeclaredFields();
+		if(fields.length == 0) return null;
+		List<Field> fieldList = new ArrayList<Field>(fields.length);
+		for(Field field : fields){
+			if((field.getModifiers() & Modifier.STATIC) != Modifier.STATIC){
+				field.setAccessible(true);
+				fieldList.add(field);
+			}
+		}
+		return fieldList;
+	}
+	
+	/**
 	 * <des> 获取类声明的字段的名称的列表集合(不包含父类) </des>
 	 * @param clazz Class
 	 * @return 类声明的字段的名称的列表集合
@@ -119,6 +137,20 @@ public class FieldUtil {
 			return null;
 		}
 		List<String> fieldNames = new ArrayList<String>(fields.length);
+		for(Field field : fields){
+			fieldNames.add(field.getName());
+		}
+		return fieldNames;
+	}
+	
+	/**
+	 * <des> 获取类声明的非静态字段的名称的列表集合(不包含父类) </des>
+	 * @since 1.5.0
+	 */
+	public static List<String> getDeclaredNonStaticFieldNames(Class<?> clazz){
+		List<Field> fields = getDeclaredNonStaticFields(clazz);
+		if(fields == null) return null;
+		List<String> fieldNames = new ArrayList<String>(fields.size());
 		for(Field field : fields){
 			fieldNames.add(field.getName());
 		}
