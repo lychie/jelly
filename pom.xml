@@ -4,7 +4,7 @@
   <groupId>org.lychie</groupId>
   <artifactId>jelly-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.5.0.GA</version>
+  <version>1.6.0.GA</version>
   <name>jelly-parent</name>
   <properties>
     <project.encoding>UTF-8</project.encoding>
@@ -124,6 +124,13 @@
       <version>2.6.10</version>
     </dependency>
     <!-- excel dependencies end -->
+    <!-- xml dependencies end -->
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <!-- xml dependencies end -->
   </dependencies>
   <build>
     <plugins>

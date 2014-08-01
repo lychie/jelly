@@ -1,13 +1,16 @@
 package org.jelly.util;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,6 +44,50 @@ public class FileUtil {
 			throw new ExecutetimeException(e);
 		} finally {
 			closeStream(in, out);
+		}
+	}
+	
+	/**
+	 * <des> 写出, 方法调用结束或抛出异常, 都将关闭输入输出流, 输出流flush </des>
+	 * @since 1.6.0
+	 */
+	public static void write(InputStream in, OutputStream out){
+		copyFile(in, out);
+	}
+
+	/**
+	 * <des> 字符串内容写出, 方法调用结束或抛出异常, 都将关闭输入输出流, 输出流flush </des>
+	 * @since 1.6.0
+	 */
+	public static void write(String text, OutputStream out){
+		try {
+			out.write(text.getBytes());
+		} catch (Throwable e) {
+			throw new ExecutetimeException(e);
+		} finally {
+			closeStream(out);
+		}
+	}
+
+	/**
+	 * <des> 字符串内容写出到文件, 方法调用结束或抛出异常, 都将关闭输入输出流, 输出流flush </des>
+	 * @since 1.6.0
+	 */
+	public static void write(String text, File file){
+		BufferedReader reader = null;
+		BufferedWriter writer = null;
+		try {
+			reader = new BufferedReader(new StringReader(text));
+			writer = new BufferedWriter(new FileWriter(file));
+			char[] buffer = new char[BUFFER_SIZE];
+			int read;
+			while((read = reader.read(buffer)) != IndexCode.EOF.toCode()){
+				writer.write(buffer, 0, read);
+			}
+		} catch (Throwable e) {
+			throw new ExecutetimeException(e);
+		} finally {
+			closeStream(reader, writer);
 		}
 	}
 	

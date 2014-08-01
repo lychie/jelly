@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product id="1001">
+    <name>产品A</name>
+    <price>28.5</price>
+    <origin>广东广州</origin>
+  </product>
+  <product id="1002">
+    <name>产品B</name>
+    <price>34.7</price>
+    <origin>广东深圳</origin>
+  </product>
+</products>
