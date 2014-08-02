@@ -95,6 +95,32 @@
   </servlet-mapping>
   <!-- filedownload demo config end -->
   
+  <!-- IdentificationCode demo config begin -->
+  <servlet>
+    <servlet-name>ValidateCode</servlet-name>
+    <servlet-class>org.jelly.image.ValidateCode</servlet-class>
+    <init-param>
+      <param-name>style</param-name>
+      <param-value>wave</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateCode</servlet-name>
+    <url-pattern>/idCode</url-pattern>
+  </servlet-mapping>
+  <!-- IdentificationCode demo config end -->
+  
+  <!-- qrcode demo config begin -->
+  <servlet>
+    <servlet-name>Qrcode</servlet-name>
+    <servlet-class>org.jelly.image.Qrcode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Qrcode</servlet-name>
+    <url-pattern>/qrcode</url-pattern>
+  </servlet-mapping>
+  <!-- qrcode demo config end -->
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

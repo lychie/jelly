@@ -4,11 +4,22 @@
   <parent>
     <groupId>org.lychie</groupId>
     <artifactId>jelly-parent</artifactId>
-    <version>1.6.0.GA</version>
+    <version>1.7.0.GA</version>
     <relativePath>../</relativePath>
   </parent>
   <artifactId>jelly-core</artifactId>
   <name>jelly-core</name>
+  <dependencies>
+    <!-- qrcode dependencies end -->
+    <dependency>
+      <groupId>qrcode</groupId>
+      <artifactId>qrcode</artifactId>
+      <version>0.50beta10</version>
+      <scope>system</scope> 
+      <systemPath>${basedir}/../extlib/Qrcode-0.50beta10.jar</systemPath>
+    </dependency>
+    <!-- qrcode dependencies end -->
+  </dependencies>
   <build>
     <resources>
       <resource>

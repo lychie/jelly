@@ -204,7 +204,7 @@ public class FieldUtil {
 	private static RuntimeException generateFieldNotFoundException(Object object, String field){
 		String classname = ClassUtil.getSimpleClassName(object);
 		String message = "类 ? 中找不到名称为 ? 的成员属性或类属性！";
-		String errorMessage = StringUtil.parse(message, field, classname);
+		String errorMessage = StringUtil.parse(message, classname, field);
 		return new ExecutetimeException(new NoSuchFieldException(errorMessage));
 	}
 	

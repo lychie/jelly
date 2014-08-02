@@ -25,6 +25,7 @@ public class FileUtil {
 
 	private FileUtil(){}
 	
+	private static final String LOCK = "_LOCK";
 	private static final int BUFFER_SIZE = 1024 * 1024 / 2;
 	
 	/**
@@ -220,15 +221,17 @@ public class FileUtil {
 	 * @since 1.0.0
 	 */
 	public static void delete(File file){
-		if(file.isFile()){
-			file.delete();
-		}else if(file.isDirectory()){
-			File[] files = file.listFiles();
-			for(File item : files){
-				delete(item);
+		synchronized (LOCK) {
+			if(file.isFile()){
+				file.delete();
+			}else if(file.isDirectory()){
+				File[] files = file.listFiles();
+				for(File item : files){
+					delete(item);
+				}
 			}
+			file.delete();
 		}
-		file.delete();
 	}
 	
 	/**
@@ -248,10 +251,12 @@ public class FileUtil {
 	 * @since 1.0.0
 	 */
 	public static boolean createDir(File dir){
-		if(!dir.exists()){
-			return dir.mkdirs();
+		synchronized (LOCK) {
+			if(!dir.exists()){
+				return dir.mkdirs();
+			}
+			return true;
 		}
-		return true;
 	}
 	
 	/**
